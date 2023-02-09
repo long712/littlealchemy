@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  background-image: url(./accsets/img/background.png);
+  justify-content: space-between;
+}
+
+.app-right {
+  width: 85%;
+  padding: 16px;
+}
+
+.app-left {
+  width: 15%;
+}

@@ -1,0 +1,25 @@
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-login,
+.footer-img {
+  color: #938671;
+  padding: 8px;
+}
+
+.footer-img:last-child {
+  padding-bottom: 0;
+}
+
+.footer-score {
+  font-size: 60pt;
+  color: #e8ded0;
+}

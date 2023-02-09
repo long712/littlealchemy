@@ -1,0 +1,12 @@
+.content-container {
+  height: 792px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content > a {
+  margin-top: -16px;
+  color: #938671;
+}

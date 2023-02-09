@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.sideBar-container {
+  background-image: url("../../accsets/img/background-side.png");
+}
+
+.sideBar-content {
+  display: flex;
+  text-align: center;
+}
+.sideBar-alphabet {
+  height: 979px;
+  border-right: 1px solid #fffcfc;
+}
+
+.sidebar-list-alphabet-item {
+  padding: 8px;
+  color: #938671;
+  font-size: 16px;
+}
+
+.sideBar-item-img {
+  width: 53px;
+}
+
+.sideBar-item-click,
+.sidebar-list-alphabet-item {
+  list-style-type: none;
+}
+
+.sideBar-item-click {
+  display: flex;
+  align-items: center;
+}

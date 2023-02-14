@@ -3,11 +3,15 @@ import { listAlphabet } from "../data";
 import "./style.css";
 
 const SideBar = (props) => {
-  const { setItem, item, setCheckCeateElement, newListItem } = props;
-  console.log(newListItem);
+  const { setItem, item, setCheckCeateElement, newListItem, setNameItem } =
+    props;
+
+  // console.log(newListItem);
   const dragStart = (event) => {
+    // console.log(event.target.name);
     setCheckCeateElement(true);
     setItem(event.target.src);
+    setNameItem(event.target.name);
   };
 
   const dragOver = (event) => {
@@ -18,10 +22,14 @@ const SideBar = (props) => {
     event.target.appendChild(item);
   };
 
-  const hanleSearch = () => {
-  };
+  const hanleSearch = () => {};
 
   newListItem.sort((a, b) => a.name.localeCompare(b.name));
+
+  const ListItemClone = newListItem.filter(
+    (value, index, self) =>
+      index === self.findIndex((item) => item.name === value.name)
+  );
 
   return (
     <div className="sideBar-container" onDrop={drop} onDragOver={dragOver}>
@@ -41,10 +49,11 @@ const SideBar = (props) => {
         </div>
         <div className="sideBar-item">
           <ul className="sideBar-list-item">
-            {newListItem.map((item, index) => (
+            {ListItemClone.map((item, index) => (
               <li className="sideBar-item-click" key={index}>
                 <img
                   src={item?.img}
+                  name={item.name}
                   className="sideBar-item-img"
                   alt=""
                   draggable
